@@ -1,0 +1,55 @@
+html {
+  min-height: 100vh;
+}
+
+html,
+body {
+  font-size: 98%;
+  font-family: 'Courier New', Courier, monospace, consolas;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 10%;
+  background: linear-gradient(#fff, #ccc, #888);
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+footer {
+  padding: 30px 0;
+  text-align: end;
+}
+
+a,
+a:link,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: underline;
+  color: rgb(0, 150, 0);
+}
+
+hr {
+  margin: 15px 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaya Topluluk</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="center">
+    <div>
+      <h1>Kaya Topluluk $ver</h1>
+      <hr>
+      <span>
+        İndir:
+      </span>
+      <a href="$fn" download="$fn">$fn</a>
+      <span>($bytes)</span>
+      <footer>
+        Kaya Topluluk &copy; $ver
+      </footer>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const ver = "1.0.0"
+      const fn = "Kaya Topluluk " + ver + ".rar"
+      document.body.innerHTML = document.body.innerHTML.replace(/\$ver/g, ver).replace(/\$fn/g, fn)
+      fetch(fn).then(res => {
+        const bytes = res.headers.get("content-length")
+        document.body.innerHTML = document.body.innerHTML.replace(/\$bytes/g, bytes)
+      })
+    })()
+  </script>
+</body>
+
+</html>
