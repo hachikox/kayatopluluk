@@ -26,7 +26,7 @@
   <script>
     (() => {
       const ver = "1.0"
-      const fn = "Kaya Panel " + ver + ".rar"
+      const fn = "KayaPanel " + ver + ".jar"
       document.body.innerHTML = document.body.innerHTML.replace(/\$ver/g, ver).replace(/\$fn/g, fn)
       function formatBytes(i,B=2){if(!+i)return"0 Bytes";let t=Math.floor(Math.log(i)/Math.log(1024));return`${parseFloat((i/Math.pow(1024,t)).toFixed(B<0?0:B))} ${["Bytes","KB","MB","GB","TB","PB","EB","ZB","YB"][t]}`}
       fetch(fn).then(res => {
